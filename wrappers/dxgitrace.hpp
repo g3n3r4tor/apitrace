@@ -41,7 +41,7 @@
 #include "d3d11imports.hpp"
 #include "d3d11size.hpp"
 #include "d3d9imports.hpp" // D3DPERF_*
-#include "shadow.hpp"
+#include "memtrace.hpp"
 
 
 /*

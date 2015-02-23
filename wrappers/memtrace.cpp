@@ -1,7 +1,6 @@
-
 /**************************************************************************
  *
- * Copyright 2014 VMware, Inc.
+ * Copyright 2014-2015 VMware, Inc.
  * All Rights Reserved.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -25,7 +24,7 @@
  **************************************************************************/
 
 
-#include "shadow.hpp"
+#include "memtrace.hpp"
 
 #include <assert.h>
 #include <string.h>

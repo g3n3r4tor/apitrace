@@ -24,8 +24,7 @@
  **************************************************************************/
 
 
-#ifndef SHADOW_HPP
-#define SHADOW_HPP
+#pragma once
 
 
 #include <stdlib.h>
@@ -65,6 +64,3 @@ public:
 
     void update(Callback callback) const;
 };
-
-
-#endif // SHADOW_HPP

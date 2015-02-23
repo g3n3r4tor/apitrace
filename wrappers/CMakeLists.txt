@@ -13,7 +13,7 @@ include_directories (
 set (CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR})
 
 add_convenience_library (trace
-    shadow.cpp
+    memtrace.cpp
 )
 target_link_libraries (trace
     common
