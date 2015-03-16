@@ -13,7 +13,7 @@ environment:
 matrix:
   fast_finish: true
 
-configuration: Release
+configuration: Debug
 
 before_build:
 - cmake -H. -Bbuild -G "%CMAKE_GENERATOR%" "-DCMAKE_PREFIX_PATH=%CMAKE_PREFIX_PATH%" -DENABLE_GUI=ON
