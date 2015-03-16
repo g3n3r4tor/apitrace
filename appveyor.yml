@@ -1,9 +1,14 @@
 shallow_clone: true
 
+# http://help.appveyor.com/discussions/suggestions/419-qt-libraries
+os: unstable
+
 environment:
   matrix:
   - CMAKE_GENERATOR: "Visual Studio 12"
+    CMAKE_PREFIX_PATH: "C:\Qt\5.4\msvc2013"
   - CMAKE_GENERATOR: "Visual Studio 12 Win64"
+    CMAKE_PREFIX_PATH: "C:\Qt\5.4\msvc2013_64"
 
 matrix:
   fast_finish: true
@@ -11,7 +16,9 @@ matrix:
 configuration: Release
 
 before_build:
-- cmake -G "%CMAKE_GENERATOR%" -H. -Bbuild
+- dir C:\Qt
+- dir C:\Qt\5.4
+- cmake -H. -Bbuild -G "%CMAKE_GENERATOR%" "-DCMAKE_PREFIX_PATH=%CMAKE_PREFIX_PATH%"
 
 build:
 - project: build\apitrace.sln
