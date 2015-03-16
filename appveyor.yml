@@ -24,3 +24,7 @@ build:
 
 after_build:
 - cmake --build build --use-stderr --config "%CONFIGURATION%" --target package -- /verbosity:minimal
+
+artifacts:
+- path: build/apitrace-*.zip
+  name: apitrace
