@@ -1,0 +1,13 @@
+shallow_clone: true
+
+environment:
+  matrix:
+  - CMAKE_GENERATOR: "Visual Studio 12"
+  - CMAKE_GENERATOR: "Visual Studio 12 Win64"
+
+matrix:
+  fast_finish: true
+
+build_script:
+- cmake -G "%CMAKE_GENERATOR%" -H. -Bbuild
+- cmake --build build --use-stderr --config Debug --target package
