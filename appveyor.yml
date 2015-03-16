@@ -21,8 +21,8 @@ before_build:
 - cmake -H. -Bbuild -G "%CMAKE_GENERATOR%" "-DCMAKE_PREFIX_PATH=%CMAKE_PREFIX_PATH%"
 
 build:
-- project: build\apitrace.sln
-- verbosity: minimal
+  project: build\apitrace.sln
+  verbosity: minimal
 
 post_build:
 - cmake --build build --use-stderr --config "%CONFIGURATION%" --target package -- /logger:"C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll"
